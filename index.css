@@ -1,0 +1,90 @@
+.center__text {
+  color: green;
+  width: 500px;
+  margin: 0px 20px;
+  padding: 0px 20px;
+  background-color: rgb(197, 197, 197);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.navBar__item {
+  padding: 5px 15px;
+  margin: 0px 15px;
+  background-color: dimgrey;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+}
+.background {
+  background-color: blanchedalmond;
+  margin: 0;
+  height: 100%;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  margin: 0px 10px;
+}
+
+.img__container {
+  background-color: rgb(197, 197, 197);
+  padding: 17px 5px 10px 5px;
+}
+
+.homepage__container {
+  display: flex;
+  justify-content: center;
+}
+
+.news__container {
+  background-color: rgb(197, 197, 197);
+  padding: 0px 20px;
+}
+
+.project__image {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  text-wrap: center;
+  float: left;
+  padding: 10px;
+}
+.project__text {
+  margin: 10px;
+}
+
+.design__quadrant {
+  background-color: rgb(209, 209, 209);
+  width: 40%;
+}
+
+.design__top__row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.design__bot__row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact__form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__form__input {
+  margin: 7.5px 0px
+}
