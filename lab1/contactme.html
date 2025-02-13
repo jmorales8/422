@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Online Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="navBar">
+        <a class="navBar__item" href="./index.html">Home</a>
+        <a class="navBar__item" href="./designprojects.html">Design Projects</a>
+        <a class="navBar__item" href="./contactme.html">Contact Me</a>
+      </div>
+      <form
+        class="contact__form"
+        id="contactForm"
+        onsubmit="return handleSubmit(event)"
+      >
+        <div class="contact__form__text">
+          If you wanna contact me, please put in a username so I know who you
+          are!
+        </div>
+        <input
+          class="contact__form__input"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        />
+
+        <div class="contact__form__text">
+          So I know where to contact you back at and reply!
+        </div>
+        <input
+          class="contact__form__input"
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+        />
+
+        <div class="contact__form__text">Put in your custom message!!!</div>
+        <textarea
+          id="message"
+          name="message"
+          rows="10"
+          cols="40"
+          required
+        ></textarea>
+
+        <button type="submit" class="contact__form__button">Submit</button>
+        <div id="successMessage" class="success-message">
+          Thank you for your message! I'll get back to you soon.
+        </div>
+        <img
+          src="./mail_chimp.png"
+          alt="mail chimp logo"
+          style="margin: 0px 10px"
+        />
+      </form>
+    </div>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Basic validation
+        if (!username || !email || !message) {
+          if (!username)
+            document.getElementById("username").classList.add("error");
+          if (!email) document.getElementById("email").classList.add("error");
+          if (!message)
+            document.getElementById("message").classList.add("error");
+          return false;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          document.getElementById("email").classList.add("error");
+          alert("Please enter a valid email address");
+          return false;
+        }
+
+        // Show success message
+        document.getElementById("successMessage").style.display = "block";
+
+        // Clear form
+        document.getElementById("contactForm").reset();
+
+        // Remove error classes
+        document.getElementById("username").classList.remove("error");
+        document.getElementById("email").classList.remove("error");
+        document.getElementById("message").classList.remove("error");
+
+        return false;
+      }
+
+      // Remove error class on input
+      document
+        .querySelectorAll(".contact__form__input, textarea")
+        .forEach((input) => {
+          input.addEventListener("input", function () {
+            this.classList.remove("error");
+          });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+.center__text {
+  color: green;
+  width: 500px;
+  margin: 0px 20px;
+  padding: 0px 20px;
+  background-color: rgb(197, 197, 197);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  height: auto;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.navBar__item {
+  padding: 5px 15px;
+  margin: 0px 15px;
+  background-color: dimgrey;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.background {
+  background-color: blanchedalmond;
+  margin: 0;
+  min-height: 100vh;
+  height: auto;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  margin: 0px 10px;
+}
+
+.img__container {
+  background-color: rgb(197, 197, 197);
+  display: flex;
+  padding: 17px 5px 10px 5px;
+  align-items: center;
+}
+
+.homepage__container {
+  display: flex;
+  justify-content: center;
+}
+
+.news__container {
+  background-color: rgb(197, 197, 197);
+  padding: 0px 20px;
+}
+
+.project__image {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  float: left;
+  padding: 10px;
+}
+
+.project__text {
+  margin: 10px;
+}
+
+.design__quadrant {
+  background-color: rgb(209, 209, 209);
+  width: 40%;
+}
+
+.design__top__row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.design__bot__row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact__form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__form__input {
+  margin: 7.5px 0px;
+  height: 25px;
+}
+
+.contact__form__text {
+  margin-top: 10px;
+}
+
+.contact__form__button {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  border-radius: 25px;
+}
+textarea {
+  margin: 7.5px 0px;
+}
+
+.error {
+  border: 2px solid #ff0000;
+}
+
+.success-message {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+@media only screen and (max-width: 1150px) and (min-width: 801px) {
+  .homepage__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .center__text {
+    font-size: large;
+    padding: 10px 0px 10px 15px;
+    margin: 10px 0px;
+  }
+  .news__text {
+    font-size: large;
+  }
+  .project__text {
+    font-size: x-large;
+  }
+  .project__image {
+    float: none;
+    padding-left: 20%;
+  }
+  .contact__form__text {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .homepage__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .center__text {
+    font-size: x-large;
+    width: 90%;
+    padding: 10px 0px 10px 15px;
+    margin-bottom: 10px;
+  }
+  .news__text {
+    font-size: x-large;
+  }
+  .project__text {
+    font-size: x-large;
+  }
+  .design__top__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .design__bot__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .design__quadrant {
+    margin: 20px 0px;
+    width: 80%;
+  }
+  .background {
+    background-color: blanchedalmond;
+    margin: 0;
+    height: 100%;
+  }
+  .contact__form__text {
+    font-size: x-large;
+  }
+  .contact__form__button {
+    height: 50px;
+    width: 125px;
+    border-radius: 25px;
+  }
+}
